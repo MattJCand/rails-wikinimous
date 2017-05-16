@@ -1,0 +1,21 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to "Wikinimous", articles_path%>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to "New article", new_article_path%>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="margin-top: 10%;">
+      <%= simple_form_for(@article) do |f| %>
+      <%= f.input :title, placeholder:"San Francisco's Bridge"%>
+      <%= f.input :content, placeholder: "More details ..."%>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

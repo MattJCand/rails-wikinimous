@@ -1,0 +1,21 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to "Wikinimous", articles_path%>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to "New article", new_article_path%>
+  </div>
+</div>
+
+<div class="container">
+<% @article.each do |article| %>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2><%= link_to article.title, article_path(article)%></h2>
+      <p style="text-align: center;"><%= article.content %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
